@@ -5,7 +5,7 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     int a = 1000;
-    int b = 50000;
+    int b = 5000;
     int c = 9000;
 
 
