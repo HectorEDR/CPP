@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
     char factexenta;
 
 
-
+    // ENTRADA
     cout << "Ingrese el subtotal de la factura: ";
     cin >> subtotal;
     cout << endl;
@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
     cin >> factexenta;
     cout << endl;
    
-    // ENTRADA
+    // SALIDA Y PROCESO
     if (factexenta == 'S' || factexenta == 's')
     {
         cdescuento = (subtotal * descuento) / 100;
