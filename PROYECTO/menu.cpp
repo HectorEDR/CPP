@@ -1,5 +1,6 @@
 #include <iostream>
-
+#include "nuevacita.h"
+#include "doctores.h"
 
 
 using namespace std;
@@ -28,32 +29,19 @@ void menu()
         cout << endl;
         cout << "Ingrese una opcion y presione enter ---> ";
         cin >> opcion;
-
+        
         switch (opcion)
         {
-        case 1:
-            // NuevaCita();
+        case 1:{
+            menucitas();
             break;
-        
-        case 2:
-            // NuevaCita();
+        }
+        case 2:{
+            mostrarD_General();
             break;
-
-        case 3:
-            void agregarPax();
-            break;
-
-        case 4:
-        
-        
-            break;
-        
-        case 5:
-            
-            break;
-
+        }
         case 6:
-        {   
+        {
             system("cls"); 
             cout << "Ha salido del sistema" << endl << endl;
             system("pause"); 
@@ -62,9 +50,12 @@ void menu()
 
             break;
         }
+        
         default:
             break;
         }
+
+
     }
 
 }
