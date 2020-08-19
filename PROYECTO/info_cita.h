@@ -1,2 +1,2 @@
 void agregarPax();
-void listacita();
+void mostrarcitas();

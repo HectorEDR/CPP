@@ -21,7 +21,7 @@ void menucitas()
     cout << "3. REGRESAR AL MENU PRINCIPAL";
     cout << endl;
     cout << endl;
-    cout << "Elija una opcion y presione la tecla enter --> ";
+    cout << "Ingrese una opcion y presione la tecla enter --> ";
     cin >> opcion;
     
     switch (opcion)
@@ -52,7 +52,6 @@ void menucitas()
         system("pause");
         break;
         }    
-              break;
         
     }
 }

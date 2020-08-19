@@ -1,5 +1,6 @@
 #include <iostream>
-
+#include "menucita.h"
+#include "menu.h"
 
 using namespace std;
 
@@ -17,7 +18,7 @@ struct pacientes
 
 };
 
-pacientes pax[7];
+pacientes pax[50];
 
 void agregarPax()
 {   
@@ -29,9 +30,9 @@ void agregarPax()
       cout << endl;
       cout << "Codigo del cliente: ";
       cin >> pax[i].codigo;
-      cout << "Nombres del paciente: ";
+      cout << "Nombre del paciente: ";
       cin >> pax[i].nombres;
-      cout << "Apellidos del paciente: ";
+      cout << "Apellido del paciente: ";
       cin >> pax[i].apellidos;
       cout << "Identidad del paciente: ";
       cin >> pax[i].cedula;
@@ -49,18 +50,46 @@ void agregarPax()
         cout << "Cita agregada";
         cout << endl;
         cout << endl;
-        cout << "Presione la tecla 'n' para salir ";
+        cout << "Presione la tecla 'n' para salir y 's' si desea crear una nueva cita: ";
         cin >> tecla;
       
      if (tecla == 'n')
      {
-       return;
+       return menucitas();
      }
-
+     if (tecla == 's')
+     {
+       return agregarPax();
+     }
     }
 }
 
-void listacita()
-{
-   pacientes pax[7];
+void mostrarcitas()
+{  
+   system("cls");
+   char tecla2 = ' ';
+
+   for (int i = 0; i < 5; i++)
+   {    cout << "*** CITA ***";
+        cout << endl;
+        cout << endl;
+        cout << "Codigo: "<< pax[i].codigo << endl;
+        cout << "Nombre: " << pax[i].nombres << endl;
+        cout << "Apellido: " << pax[i].apellidos << endl;
+        cout << "Identidad: " << pax[i].cedula << endl;
+        cout << "Edad: " << pax[i].edad << endl;
+        cout << "Telefono: " << pax[i].numero << endl;
+        cout << "Correo: " << pax[i].email << endl;
+        cout << "Codigo del Doctor: " << pax[i].C_Doctor << endl;
+        cout << endl;
+        cout << endl;
+   }
+        cout << endl;
+        cout << "Presione la tecla 'n' para salir ";
+        cin >> tecla2;
+      
+        if (tecla2 == 'n')
+      {
+       return menu();
+      }
 }

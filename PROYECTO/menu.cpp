@@ -1,7 +1,7 @@
 #include <iostream>
-#include "nuevacita.h"
+#include "menucita.h"
 #include "doctores.h"
-#include "todascitas.h"
+#include "info_cita.h"
 
 
 using namespace std;
@@ -20,8 +20,8 @@ void menu()
         cout << "**************" << endl;
         cout << endl;
         cout << "1. Crear una nueva cita." << endl;
-        cout << "2. Citas en lista." << endl;
-        cout << "3. Imprimir o Enviar una cita." << endl;
+        cout << "2. Registro de Citas." << endl;
+        cout << "3. Imprimir o Enviar la cita." << endl;
         cout << "4. Crear nuevo expediente." << endl;
         cout << "5. Expediente del paciente." << endl;
         cout << "6. Salir" << endl;
@@ -38,15 +38,13 @@ void menu()
             break;
         }
         case 2:{
-            listacita();
+            mostrarcitas();
             break;
         }
         case 6:
         {
             system("cls"); 
             cout << "Ha salido del sistema" << endl << endl;
-            system("pause"); 
-            system("cls"); 
             salir =  true;
 
             break;
