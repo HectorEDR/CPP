@@ -17,30 +17,33 @@ string docgeneral[6][4]{
 };
 
 void mostrarD_General()
-{  
-   system("cls");
-   cout << "Codigo, nombre, especialidad y horario" << endl;
-   cout << endl;
-   for (int i = 0; i < 6; i++)
-   {
-       cout << docgeneral[i][0] << " ";
-       cout << docgeneral[i][1] << " ";
-       cout << docgeneral[i][2] << " ";
-       cout << docgeneral[i][3] << " ";
-       cout << endl;
-   }
-   cout << endl;
-   cout << endl;
-   cout << "Desea crear la cita? s/n  ";
-   cin >> opcionge;
-   if (opcionge == 's')
-   {
-      agregarPax();
-   } else if(opcionge == 'n')
+{  bool opcion1 = false;
+       while (opcion1 = false)
+       {
+            for (int i = 0; i < 1; i++)
+        {    system("cls");
+                cout << "Codigo, nombre, especialidad y horario" << endl;
+                cout << endl;
+            cout << docgeneral[i][0] << " ";
+            cout << docgeneral[i][1] << " ";
+            cout << docgeneral[i][2] << " ";
+            cout << docgeneral[i][3] << " ";
+            cout << endl;
+        }
+            cout << endl;
+            cout << endl;
+            cout << "Desea crear la cita? s/n: ";
+            cin >> opcionge;
+    if (opcionge == 's')
     {
-        return;
+        opcion1 = false;
+    } else if(opcionge == 'n')
+        {
+            opcion1 = true;
+        }
     }
-}
+       
+};
 
 string especialista[19][4]
 {   {"Codigo, nombre y horario", "\n"},

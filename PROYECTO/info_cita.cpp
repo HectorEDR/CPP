@@ -78,21 +78,21 @@ void mostrarcitas()
    system("cls");
    char tecla2 = ' ';
 
-   for (int i = 0; i < 5; i++)
+   for (int j = 0; j < 5; j++)
    {    cout << "*** CITA ***";
         cout << endl;
         cout << endl;
-        cout << "Codigo: "<< pax[i].codigo << endl;
-        cout << "Nombre: " << pax[i].nombres << endl;
-        cout << "Apellido: " << pax[i].apellidos << endl;
-        cout << "Identidad: " << pax[i].cedula << endl;
-        cout << "Edad: " << pax[i].edad << endl;
-        cout << "Telefono: " << pax[i].numero << endl;
-        cout << "Correo: " << pax[i].email << endl;
-        cout << "Codigo del Doctor: " << pax[i].C_Doctor << endl;
-        cout << "Dia: " << pax[i].dia << endl;
-        cout << "Mes: " << pax[i].mes << endl;
-        cout << " Hora: " << pax[i].hora << endl;
+        cout << "Codigo: "<< pax[j].codigo << endl;
+        cout << "Nombre: " << pax[j].nombres << endl;
+        cout << "Apellido: " << pax[j].apellidos << endl;
+        cout << "Identidad: " << pax[j].cedula << endl;
+        cout << "Edad: " << pax[j].edad << endl;
+        cout << "Telefono: " << pax[j].numero << endl;
+        cout << "Correo: " << pax[j].email << endl;
+        cout << "Codigo del Doctor: " << pax[j].C_Doctor << endl;
+        cout << "Dia: " << pax[j].dia << endl;
+        cout << "Mes: " << pax[j].mes << endl;
+        cout << "Hora: " << pax[j].hora << endl;
         cout << endl;
         cout << endl;
    }

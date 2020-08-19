@@ -1,6 +1,5 @@
 #include <iostream>
 #include "menucita.h"
-#include "doctores.h"
 #include "info_cita.h"
 
 

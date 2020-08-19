@@ -1,5 +1,5 @@
 #include <iostream>
-#include "menu.h"
+
 #include "doctores.h"
 
 
@@ -42,7 +42,7 @@ void menucitas()
 
          case 3:
         {
-            return menu();
+            return;
             break;
         }
         
