@@ -1,6 +1,7 @@
 #include <iostream>
 #include "nuevacita.h"
 #include "doctores.h"
+#include "todascitas.h"
 
 
 using namespace std;
@@ -37,7 +38,7 @@ void menu()
             break;
         }
         case 2:{
-            mostrarD_General();
+            listacita();
             break;
         }
         case 6:

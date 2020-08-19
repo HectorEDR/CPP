@@ -1,1 +1,2 @@
 void agregarPax();
+void listacita();

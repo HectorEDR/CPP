@@ -1,6 +1,10 @@
 #include <iostream>
+#include "info_cita.h"
 
 using namespace std;
+
+char opcionge = ' ';
+char opcionesp = ' ';
 
 string docgeneral[6][4]{
     {"D001", "Hector Dubon", "General", "8:00AM - 1:00PM"},
@@ -27,7 +31,15 @@ void mostrarD_General()
    }
    cout << endl;
    cout << endl;
-
+   cout << "Desea crear la cita? s/n  ";
+   cin >> opcionge;
+   if (opcionge == 's')
+   {
+      agregarPax();
+   } else if(opcionge == 'n')
+    {
+        return;
+    }
 }
 
 string especialista[19][4]
@@ -54,10 +66,11 @@ string especialista[19][4]
 
 void mostrarD_especial()
 {
-    system("cls");
-   
+   system("cls");
+
    for (int i = 0; i < 19; i++)
    {
+
        cout << especialista[i][0] << " ";
        cout << especialista[i][1] << " ";
        cout << especialista[i][2] << " ";
@@ -67,5 +80,13 @@ void mostrarD_especial()
    }
    cout << endl;
    cout << endl;
-  
+   cout << "Desea crear la cita? s/n: ";
+   cin >> opcionesp;
+   if (opcionesp == 's')
+   {
+      agregarPax();
+   } else if(opcionesp == 'n')
+   {
+       return;
+   }
 }

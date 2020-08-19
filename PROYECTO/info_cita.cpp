@@ -18,10 +18,15 @@ struct pacientes
 };
 
 pacientes pax[7];
+
 void agregarPax()
-{
+{   
+    
+    char tecla = ' ';
     for (int i = 0; i < 7; i++)
-    {
+    { 
+      cout << endl;
+      cout << endl;
       cout << "Codigo del cliente: ";
       cin >> pax[i].codigo;
       cout << "Nombres del paciente: ";
@@ -38,9 +43,24 @@ void agregarPax()
       cin >> pax[i].email;
       cout << "Ingrese el codigo de doctor: ";
       cin >> pax[i].C_Doctor;
-      cout << endl;
-      cout << endl;
+    
+        cout << endl;
+        cout << endl;
+        cout << "Cita agregada";
+        cout << endl;
+        cout << endl;
+        cout << "Presione la tecla 'n' para salir ";
+        cin >> tecla;
       
-      system("pause");
+     if (tecla == 'n')
+     {
+       return;
+     }
+
     }
+}
+
+void listacita()
+{
+   pacientes pax[7];
 }

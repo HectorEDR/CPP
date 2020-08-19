@@ -1,7 +1,7 @@
 #include <iostream>
 #include "menu.h"
 #include "doctores.h"
-#include "info_cita.h"
+
 
 using namespace std;
 
@@ -29,14 +29,14 @@ void menucitas()
         case 1:
         {
             mostrarD_General();
-            agregarPax();
+            
             break;
         }
 
         case 2:
         {
             mostrarD_especial();
-            agregarPax();
+            
             break;
         }
 
@@ -55,7 +55,6 @@ void menucitas()
               break;
         
     }
-    
 }
 
  
