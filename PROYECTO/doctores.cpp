@@ -1,29 +1,26 @@
 #include <iostream>
-#include "info_cita.h"
+#include "addpax.h"
 
 using namespace std;
 
-char opcionge = ' ';
-char opcionesp = ' ';
-
-string docgeneral[6][4]{
+string docgeneral[6][4]
+{
     {"D001", "Hector Dubon", "General", "8:00AM - 1:00PM"},
     {"D002", "Carlos Ramirez", "General", "7:00AM - 12:00PM"},
     {"D003", "Karla Hernandez", "General", "1:00PM - 6:00PM"},
     {"D004", "Eduardo Fajardo", "General", "2:00PM - 7:00PM"},
     {"D005", "Ana Garcia Lopez", "General", "6:00PM - 11:00PM"},
     {"D006", "Andrea Fernandez", "General", "12:00AM - 6:00AM"},
-
 };
 
 void mostrarD_General()
-{  bool opcion1 = false;
-       while (opcion1 = false)
-       {
-            for (int i = 0; i < 1; i++)
-        {    system("cls");
-                cout << "Codigo, nombre, especialidad y horario" << endl;
-                cout << endl;
+{  
+    system("cls");
+    char opcionge = ' ';
+            cout << "Codigo, nombre, especialidad y horario" << endl;
+            cout << endl;
+            for (int i = 0; i < 6; i++)
+        {    
             cout << docgeneral[i][0] << " ";
             cout << docgeneral[i][1] << " ";
             cout << docgeneral[i][2] << " ";
@@ -34,19 +31,18 @@ void mostrarD_General()
             cout << endl;
             cout << "Desea crear la cita? s/n: ";
             cin >> opcionge;
-    if (opcionge == 's')
-    {
-        opcion1 = false;
-    } else if(opcionge == 'n')
-        {
-            opcion1 = true;
-        }
-    }
-       
-};
+            if (opcionge == 's')
+            {
+                agregarPax();
+            } else if(opcionge == 'n')
+                {
+                    return;
+                }
+    system("cls");
+}
 
 string especialista[19][4]
-{   {"Codigo, nombre y horario", "\n"},
+{   
     {"Medicina Interna:", "\n"},
     {"E001", "Wilmer Cruz Paz", "8:00AM - 1:00PM"},
     {"E002", "Carlos Fernandez", "11:00AM - 5:00PM", "\n"},
@@ -70,15 +66,14 @@ string especialista[19][4]
 void mostrarD_especial()
 {
    system("cls");
-
+   char opcionesp = ' ';
+   cout << "Codigo, nombre y horario" << endl;
    for (int i = 0; i < 19; i++)
    {
-
        cout << especialista[i][0] << " ";
        cout << especialista[i][1] << " ";
        cout << especialista[i][2] << " ";
        cout << especialista[i][3] << " ";
-       
        cout << endl;
    }
    cout << endl;
@@ -92,4 +87,5 @@ void mostrarD_especial()
    {
        return;
    }
+   system("cls");
 }

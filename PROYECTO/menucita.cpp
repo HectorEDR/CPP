@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "menu.h"
 #include "doctores.h"
 
 
@@ -50,6 +50,7 @@ void menucitas()
         {   system("cls");
         cout << "Ingrese una opcion valida (1, 2, 3)" << endl << endl;
         system("pause");
+        return menu();
         break;
         }    
         

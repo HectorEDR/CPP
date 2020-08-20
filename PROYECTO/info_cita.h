@@ -1,2 +1,3 @@
-void agregarPax();
+
 void mostrarcitas();
+void buscar_citas();

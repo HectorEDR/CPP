@@ -40,6 +40,10 @@ void menu()
             mostrarcitas();
             break;
         }
+           case 3:{
+            buscar_citas();
+            break;
+        }
         case 6:
         {
             system("cls"); 
@@ -52,8 +56,5 @@ void menu()
         default:
             break;
         }
-
-
     }
-
 }
