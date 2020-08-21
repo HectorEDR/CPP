@@ -2,6 +2,22 @@
 #include "addpax.h"
 
 using namespace std;
+void cita_pax()
+ {
+   char opcionesp = ' ';
+   cout << endl;
+   cout << endl;
+   cout << "Desea crear la cita? s/n: ";
+   cin >> opcionesp;
+   if (opcionesp == 's')
+   {
+      agregarPax();
+   } else if(opcionesp == 'n')
+   {
+       return;
+   }
+   system("cls");
+ }
 
 string docgeneral[6][4]
 {
@@ -16,7 +32,7 @@ string docgeneral[6][4]
 void mostrarD_General()
 {  
     system("cls");
-    char opcionge = ' ';
+    
             cout << "Codigo, nombre, especialidad y horario" << endl;
             cout << endl;
             for (int i = 0; i < 6; i++)
@@ -27,18 +43,7 @@ void mostrarD_General()
             cout << docgeneral[i][3] << " ";
             cout << endl;
         }
-            cout << endl;
-            cout << endl;
-            cout << "Desea crear la cita? s/n: ";
-            cin >> opcionge;
-            if (opcionge == 's')
-            {
-                agregarPax();
-            } else if(opcionge == 'n')
-                {
-                    return;
-                }
-    system("cls");
+           cita_pax();
 }
 
 string especialista[19][4]
@@ -66,7 +71,7 @@ string especialista[19][4]
 void mostrarD_especial()
 {
    system("cls");
-   char opcionesp = ' ';
+   
    cout << "Codigo, nombre y horario" << endl;
    for (int i = 0; i < 19; i++)
    {
@@ -76,16 +81,6 @@ void mostrarD_especial()
        cout << especialista[i][3] << " ";
        cout << endl;
    }
-   cout << endl;
-   cout << endl;
-   cout << "Desea crear la cita? s/n: ";
-   cin >> opcionesp;
-   if (opcionesp == 's')
-   {
-      agregarPax();
-   } else if(opcionesp == 'n')
-   {
-       return;
-   }
-   system("cls");
+   cita_pax();
 }
+ 

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "menucita.h"
 #include "info_cita.h"
-
+#include "buscarcitas.h"
 
 using namespace std;
 

@@ -4,14 +4,13 @@
 
 using namespace std;
 
-
 struct pacientes
 {
     string codigo = "";
     string nombres = "";
     string apellidos = "";
     string cedula = " ";
-    int edad = 0;
+    string edad = " ";
     string numero = " ";
     string email = "";
     string C_Doctor = "";
@@ -25,7 +24,7 @@ pacientes pax[50];
 void agregarPax()
 {   
     char tecla = ' ';
-    for (int i = 0; i < 40; i++)
+    for (int i = 0; i < 50;)
     { 
       cout << endl;
       cout << endl;
@@ -51,8 +50,7 @@ void agregarPax()
       cin >> pax[i].mes;
       cout << "Ingrese la hora de la cita: ";
       cin >> pax[i].hora;
-
-
+      i++;
         cout << endl;
         cout << endl;
         cout << "Cita agregada";
@@ -70,16 +68,17 @@ void agregarPax()
        return agregarPax();
      }
     }
+        
 }
 
 void mostrarcitas()
 {  
    system("cls");
-  
-   char tecla2 = ' ';
 
-   for (int j = 0; j < 5; j++)
-   {    cout << "*** CITA ***";
+   char tecla2 = ' ';
+      for (int j = 0; j < 5; j++)
+      {
+        cout << "*** CITA ***";
         cout << endl;
         cout << endl;
         cout << "Codigo: "<< pax[j].codigo << endl;
@@ -94,16 +93,20 @@ void mostrarcitas()
         cout << "Mes: " << pax[j].mes << endl;
         cout << "Hora: " << pax[j].hora << endl;
         cout << endl;
+      }
         cout << endl;
-   }
         cout << endl;
         cout << "Presione la tecla 'n' para salir: ";
         cin >> tecla2;
       
-        if (tecla2 == 'n')
-      {
-       return menu();
-      }
+            if (tecla2 == 'n')
+            {
+            return menu();
+            } 
+            // if (tecla2 == 's')
+            // {
+            //   mostrarcitas();
+            // }
 }
 
 
@@ -117,7 +120,7 @@ void buscar_citas()
   cout << "Ingrese el codigo del paciente: ";
   cin >> c_pax;
 
-  for (int x = 0; x < 40; x++)
+  for (int x = 0; x < 50; x++)
   {  char tecla3 = ' ';
      if (c_pax == pax[x].codigo)
      {
@@ -135,7 +138,7 @@ void buscar_citas()
         cout << "Hora: " << pax[x].hora << endl;
         cout << endl;
         cout << endl;
-        cout << endl;
+        
         cout << "Presione la tecla 'n' para salir, 'y' para imprimir, 'e' para enviar por correo.";
         cout << endl;
         cout << endl;
@@ -149,6 +152,7 @@ void buscar_citas()
        cout << endl;
        cout << endl;
        system("pause");
+       return;
       
      }   
         if (tecla3 == 'n' || tecla3 == 'N')
