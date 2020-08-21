@@ -25,7 +25,7 @@ pacientes pax[50];
 void agregarPax()
 {   
     char tecla = ' ';
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 40; i++)
     { 
       cout << endl;
       cout << endl;
@@ -117,7 +117,7 @@ void buscar_citas()
   cout << "Ingrese el codigo del paciente: ";
   cin >> c_pax;
 
-  for (int x = 0; x < 1; x++)
+  for (int x = 0; x < 40; x++)
   {  char tecla3 = ' ';
      if (c_pax == pax[x].codigo)
      {
