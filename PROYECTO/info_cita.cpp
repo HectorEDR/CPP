@@ -22,10 +22,10 @@ struct pacientes
 pacientes pax[50];
 
 void agregarPax()
-{   
+{   int i = 0;
     char tecla = ' ';
-    for (int i = 0; i < 50;)
-    { 
+   while (true)
+   {
       cout << endl;
       cout << endl;
       cout << "Codigo del cliente: ";
@@ -50,7 +50,7 @@ void agregarPax()
       cin >> pax[i].mes;
       cout << "Ingrese la hora de la cita: ";
       cin >> pax[i].hora;
-      i++;
+       i++;
         cout << endl;
         cout << endl;
         cout << "Cita agregada";
@@ -63,12 +63,7 @@ void agregarPax()
      {
        return menucitas();
      }
-     if (tecla == 's')
-     {
-       return agregarPax();
-     }
     }
-        
 }
 
 void mostrarcitas()
