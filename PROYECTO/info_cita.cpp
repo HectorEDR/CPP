@@ -51,6 +51,7 @@ void agregarPax()
       cout << "Ingrese la hora de la cita: ";
       cin >> pax[i].hora;
        i++;
+       
         cout << endl;
         cout << endl;
         cout << "Cita agregada";
@@ -64,6 +65,7 @@ void agregarPax()
        return menucitas();
      }
     }
+    
 }
 
 void mostrarcitas()
@@ -104,75 +106,26 @@ void mostrarcitas()
             // }
 }
 
-
-void buscar_citas()
+string buscarPaciente(string codigoPaciente)
 {
-  system("cls");
-  string c_pax = " ";
-  cout << " REGISTRO DE CITAS"<< endl;
-  cout << "-------------------"<< endl;
-  cout << endl;
-  cout << "Ingrese el codigo del paciente: ";
-  cin >> c_pax;
-
-  for (int x = 0; x < 50; x++)
-  {  char tecla3 = ' ';
-     if (c_pax == pax[x].codigo)
-     {
-        cout << endl;
-        cout << endl;
-        cout << "Nombre: " << pax[x].nombres << endl;
-        cout << "Apellido: " << pax[x].apellidos << endl;
-        cout << "Identidad: " << pax[x].cedula << endl;
-        cout << "Edad: " << pax[x].edad << endl;
-        cout << "Telefono: " << pax[x].numero << endl;
-        cout << "Correo: " << pax[x].email << endl;
-        cout << "Codigo del Doctor: " << pax[x].C_Doctor << endl;
-        cout << "Dia: " << pax[x].dia << endl;
-        cout << "Mes: " << pax[x].mes << endl;
-        cout << "Hora: " << pax[x].hora << endl;
-        cout << endl;
-        cout << endl;
-        
-        cout << "Presione la tecla 'n' para salir, 'y' para imprimir, 'e' para enviar por correo.";
-        cout << endl;
-        cout << endl;
-        cout << "Ingrese su opcion: ";
-        cin >> tecla3;
-     } else
-     {
-       cout << endl;
-       system("cls");
-       cout << "Codigo del paciente no existe";
-       cout << endl;
-       cout << endl;
-       system("pause");
-       return;
-      
-     }   
-        if (tecla3 == 'n' || tecla3 == 'N')
-      {
-       return ;
+      for (int x = 0; x < 50; x++)
+      {   
+          
+          if (pax[x].codigo == codigoPaciente)
+          {     
+                 cout << endl;
+                 cout << endl;
+                cout << "Nombre: " << pax[x].nombres << endl;
+                cout << "Apellido: " << pax[x].apellidos << endl;
+                cout << "Identidad: " << pax[x].cedula << endl;
+                cout << "Edad: " << pax[x].edad << endl;
+                cout << "Telefono: " << pax[x].numero << endl;
+                cout << "Correo: " << pax[x].email << endl;
+                cout << "Codigo del Doctor: " << pax[x].C_Doctor << endl;
+                cout << "Dia: " << pax[x].dia << endl;
+                cout << "Mes: " << pax[x].mes << endl;
+                cout << "Hora: " << pax[x].hora << endl;
+          }
       }
-       if (tecla3 == 'y' || tecla3 == 'Y')
-       {
-         system("cls");
-         cout << endl;
-         cout << endl;
-         cout << "Imprimiendo cita ------ ";
-         cout << endl;
-         cout << endl;
-         system("pause");
-       }
-       if (tecla3 == 'e' || tecla3 == 'E')
-       {
-         system("cls");
-         cout << endl;
-         cout << endl;
-         cout << "Enviar cita a: " << pax[x].email;
-         cout << endl;
-         cout << endl;
-         system("pause");
-       }
-  }
+      return "";
 }

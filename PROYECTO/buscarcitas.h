@@ -1,1 +1,2 @@
-void buscar_citas();
+
+void mostrarBusquedaCita();

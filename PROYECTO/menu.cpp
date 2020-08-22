@@ -21,13 +21,11 @@ void menu()
         cout << "1. Crear una nueva cita." << endl;
         cout << "2. Registro de Citas." << endl;
         cout << "3. Imprimir o Enviar la cita." << endl;
-        cout << "4. Crear nuevo expediente." << endl;
-        cout << "5. Expediente del paciente." << endl;
-        cout << "6. Salir" << endl;
+        cout << "4. Salir" << endl;
 
         cout << endl;
         cout << endl;
-        cout << "Ingrese una opcion y presione enter ---> ";
+        cout << "Ingrese una opcion y presione la tecla enter ---> ";
         cin >> opcion;
         
         switch (opcion)
@@ -41,10 +39,11 @@ void menu()
             break;
         }
            case 3:{
-            buscar_citas();
+            
+                mostrarBusquedaCita();
             break;
         }
-        case 6:
+        case 4:
         {
             system("cls"); 
             cout << "Ha salido del sistema" << endl << endl;
@@ -53,8 +52,14 @@ void menu()
             break;
         }
         
-        default:
-            break;
-        }
+        default: 
+        {   system("cls");
+        cout << "Ingrese una opcion valida (1, 2, 3)" << endl << endl;
+        system("pause");
+        return;
+        break;
+        }    
+            
+       }
     }
 }
