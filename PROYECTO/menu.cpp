@@ -19,9 +19,9 @@ void menu()
         cout << "**************" << endl;
         cout << endl;
         cout << "1. Crear una nueva cita." << endl;
-        cout << "2. Registro de Citas." << endl;
-        cout << "3. Imprimir o Enviar la cita." << endl;
-        cout << "4. Salir" << endl;
+        cout << "2. Registro de citas." << endl;
+        cout << "3. Busqueda de cita." << endl;
+        cout << "4. Salir." << endl;
 
         cout << endl;
         cout << endl;
@@ -30,19 +30,15 @@ void menu()
         
         switch (opcion)
         {
-        case 1:{
+        case 1:
             menucitas();
             break;
-        }
-        case 2:{
+        case 2:
             mostrarcitas();
             break;
-        }
-           case 3:{
-            
-                mostrarBusquedaCita();
+           case 3:
+            mostrarBusquedaCita();
             break;
-        }
         case 4:
         {
             system("cls"); 
@@ -54,9 +50,9 @@ void menu()
         
         default: 
         {   system("cls");
-        cout << "Ingrese una opcion valida (1, 2, 3)" << endl << endl;
+        cout << "Ingrese una opcion valida (1, 2, 3, 4)" << endl << endl;
         system("pause");
-        return;
+        return menu();
         break;
         }    
             

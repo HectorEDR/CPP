@@ -12,22 +12,31 @@ void mostrarBusquedaCita()
   cout << endl;
   cout << " REGISTRO DE CITAS"<< endl;
   cout << "-------------------"<< endl;
-  cout << endl;
-  cout << endl;
+  
   
   while (true)
   {
+     cout << endl;
+     cout << endl;
      cout << "Ingrese el codigo del paciente: ";
      cin >> c_pax;
      citaPaciente = buscarPaciente(c_pax);
-
-      cout << endl;
-      cout << endl;
-      cout << "Desea continuar s/n: ";
-         cin >> continuar;
+      
+      if (citaPaciente != "")
+      {  
+         cout << endl;
+         cout << citaPaciente;
+    
+      } else {
+            cout << endl;
+            cout << endl;
+            cout << "Desea continuar con la busqueda? s/n: ";
+               cin >> continuar;
             if (continuar == 'n' || continuar == 'N')
             {
                 return;
             }
+      }
+
   }
 }

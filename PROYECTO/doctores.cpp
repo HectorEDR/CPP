@@ -32,7 +32,11 @@ string docgeneral[6][4]
 void mostrarD_General()
 {  
     system("cls");
-    
+            cout << endl;
+            cout << " DOCTORES GENERALES" << endl;
+            cout << "--------------------";
+            cout << endl;
+            cout << endl;
             cout << "Codigo, nombre, especialidad y horario" << endl;
             cout << endl;
             for (int i = 0; i < 6; i++)
@@ -71,7 +75,11 @@ string especialista[19][4]
 void mostrarD_especial()
 {
    system("cls");
-   
+   cout << endl;
+   cout << " ESPECIALISTAS" << endl;
+   cout << "---------------";
+   cout << endl;
+   cout << endl;
    cout << "Codigo, nombre y horario" << endl;
    for (int i = 0; i < 19; i++)
    {

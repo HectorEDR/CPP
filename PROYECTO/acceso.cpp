@@ -16,7 +16,10 @@ bool login()
             cout << "No se ha validado su password, Por favor contacte a servicio tecnico." << endl;
             return false;
         }
-        
+        cout << "--------------------------" << endl;
+        cout << " AGENDA DE CITAS MEDICAS" << endl;
+        cout << "--------------------------" << endl;
+        cout << endl;
         cout << "Ingrese su password: ";
         cin >> password;
 
