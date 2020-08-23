@@ -54,7 +54,7 @@ void menu()
         
         default: 
         {   system("cls");
-        cout << "Ingrese una opcion valida (1, 2, 3)" << endl << endl;
+        cout << "Ingrese una opcion valida (1, 2, 3, 4)" << endl << endl;
         system("pause");
         return;
         break;
