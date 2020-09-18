@@ -92,7 +92,7 @@ void AjustePositivo()
     system("cls");
     cout << endl;
     cout << " Ajuste Positivo de inventario" << endl;
-    cout << "------------------------------------" << endl;
+    cout << "-------------------------------" << endl;
     cout << endl;
     cout << "Ingrese el codigo del producto: ";
     cin >> codigo;
@@ -112,8 +112,8 @@ void AjusteNegativo()
 
     system("cls");
     cout << endl;
-    cout << " Salida de productos al inventario" << endl;
-    cout << "------------------------------------" << endl;
+    cout << " Ajuste Negativo de inventario" << endl;
+    cout << "-------------------------------" << endl;
     cout << endl;
     cout << "Ingrese el codigo del producto: ";
     cin >> codigo;
