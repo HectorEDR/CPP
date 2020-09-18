@@ -83,6 +83,49 @@ void salidaDeInventario()
 
     movimientoInventario(codigo, cantidad, "-");
 }
+
+void AjustePositivo()
+{
+    string codigo = "";
+    int cantidad = 0;
+
+    system("cls");
+    cout << endl;
+    cout << " Ajuste Positivo de inventario" << endl;
+    cout << "------------------------------------" << endl;
+    cout << endl;
+    cout << "Ingrese el codigo del producto: ";
+    cin >> codigo;
+    cout << endl;
+    cout << endl;
+    cout << "Ingrese la cantidad del producto: ";
+    cin >> cantidad;
+    cout << endl;
+
+    movimientoInventario(codigo, cantidad, "+");
+}
+
+void AjusteNegativo()
+{
+    string codigo = "";
+    int cantidad = 0;
+
+    system("cls");
+    cout << endl;
+    cout << " Salida de productos al inventario" << endl;
+    cout << "------------------------------------" << endl;
+    cout << endl;
+    cout << "Ingrese el codigo del producto: ";
+    cin >> codigo;
+    cout << endl;
+    cout << endl;
+    cout << "Ingrese la cantidad del producto a salir: ";
+    cin >> cantidad;
+    cout << endl;
+
+    movimientoInventario(codigo, cantidad, "-");
+}
+
 int main(int argc, char const *argv[])
 {   
     int opcion = 0;
@@ -99,6 +142,8 @@ int main(int argc, char const *argv[])
             cout << "1 - Productos" << endl;
             cout << "2 - Ingreso de inventario" << endl;
             cout << "3 - Salida de inventario" << endl;
+            cout << "4 - Ajuste Positivo" << endl;
+            cout << "5 - Ajuste Negativo" << endl;
             cout << "0 - Salir" << endl;
             cout << endl;
             cout << "Por favor ingrese una opcion: ";
@@ -114,6 +159,12 @@ int main(int argc, char const *argv[])
             break;
             case 3:
             salidaDeInventario();
+            break;
+            case 4:
+            AjustePositivo();
+            break;
+            case 5:
+            AjusteNegativo();
             break;
 
             default:
